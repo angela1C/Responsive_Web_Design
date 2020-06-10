@@ -1,0 +1,138 @@
+html {
+    /* Setting a base font size of 10px give us easier rem calculations
+       Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+     */
+    font-size: 10px;
+  }
+  
+  body {
+    /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color:  #386250;
+  }
+  
+  @media (max-width: 460px) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+  }
+  
+  h2 {
+    font-size: 3.25rem;
+    color:	#5d4562;
+    
+  }
+
+  h3{ 
+      font-size: 2.1rem;
+      color: #5c4562;
+
+  }
+  
+  a {
+    color: 	#43384c;
+  }
+  
+  a:visited {
+    color:  #8e8f6f;
+  }
+
+  #sub-title{
+      color: 	#73707d;
+  }
+  
+  #main {
+    margin: 30px 8px;
+    padding: 15px;
+   
+    border-radius: 5px;
+    background: #e2ddd2; 
+    background-image: url(https://irishstudies.sunygeneseoenglish.org/wp-content/uploads/sites/6/2016/11/green-white-and-purple-banner.jpg), url(https://upload.wikimedia.org/wikipedia/commons/d/d8/SuffrageteCalendar_HAGAM.jpg);
+    background-position:  center top,right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 12% , 15%;
+   
+ 
+
+  }
+  
+  @media (max-width: 460px) {
+    #main {
+    margin: 0;
+    background-image: none;
+
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  #img-div {
+    background: 	#fff;
+    padding: 15px;
+    margin: 0;
+    
+  }
+  
+  #img-caption {
+    margin: 15px 0 5px 0;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 460px) {
+    #img-caption {
+      font-size: 1.4rem;
+    }
+  }
+  
+  #headline {
+    margin: 50px 0;
+    text-align: center;
+    color:	#46514d;
+  }
+  
+  ul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  li {
+    margin: 16px 0;
+  }
+  
+  blockquote {
+    font-style: italic;
+    max-width: 545px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    color:	#5e624b;
+    font-size: 1.8rem;
+  }
+
+
+  #tribute-info{
+      padding: 20px;
+      color:	#1b4f3c;
+  }
+
+  #ref{
+      padding: 10%;
+  }
+
