@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"</html>
+<head>
+
+    <meta charset="UTF-8">
+   <!-- href="css/VPaonNP.css"-->
+    <link rel="stylesheet" type="text/css"  href="css/survey_style.css"/>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Tara's Tasty Treats</h1>
+    <p id="description" class="description text-center">
+      Please complete the survey below to receive your 50% off coupon!.
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Please enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Please enter a valid email address."
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Age<span class="small">(optional)</span></label>
+      <input
+        type="number"
+        name="age"
+        id="number"
+        min="10"
+        max="99"
+        class="form-control"
+        placeholder="18"
+      />
+    </div>
+    <div class="form-group">
+      <p>What is your preferences in treat food?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select tastes</option>
+        <option value="sweet">I have a sweet tooth</option>
+        <option value="savoury">I like savoury snacks</option>
+        <option value="healthy">I prefer to eat healthy</option>
+        <option value="celebration">I do enjoy celebration food!</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>How often do you bake at home?</p>
+      <label>
+        <input
+          name="home-baker"
+          value="rarely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Rarely</label
+      >
+      <label>
+        <input
+          name="home-baker"
+          value="at-least-once-a-week"
+          type="radio"
+          class="input-radio"
+        />At Least Once a Week</label
+      >
+
+      <label
+        ><input
+          name="home-baker"
+          value="weekends-only"
+          type="radio"
+          class="input-radio"
+        />Weekends Only</label
+      >
+
+      <label
+        ><input
+          name="home-baker"
+          value="when-entertaining"
+          type="radio"
+          class="input-radio"
+        />When entertaining</label
+      >
+
+      <label
+        ><input
+          name="home-baker"
+          value="for-special-occasions-only"
+          type="radio"
+          class="input-radio"
+        />For Special Occasions Only</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What is your favourite type of home-baked goodies?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select your favourite from the options</option>
+        <option value="cookies">Cookies</option>
+        <option value="muffins">Muffins</option>
+        <option value="cupcakes">Cupcakes</option>
+        <option value="tray-bakes">Traybakes</option>
+        <option value="cakes">Cakes</option>
+        <option value="savoury-biscuits">Savoury Biscuits</option>
+        <option value="none">None of the above</option>
+
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>
+        What would you like to see more on our menu?
+        <span class="small">(Please check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="lower-sugar-content"
+          type="checkbox"
+          class="input-checkbox"
+        />Lower Sugar Content</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="additional-wholegrain-options"
+          type="checkbox"
+          class="input-checkbox"
+        />Additional Wholegrain Options</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="additional-gluten-free-options"
+          type="checkbox"
+          class="input-checkbox"
+        />Additional Gluten Free Options</label
+      >
+      
+      <label
+        ><input
+          name="prefer"
+          value="more-fruit-and-nuts-options"
+          type="checkbox"
+          class="input-checkbox"
+        />More Fruit and Nuts Options</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="off-peak-delivery-options"
+          type="checkbox"
+          class="input-checkbox"
+        />Off Peak Delivery Options</label
+      >
+      
+      
+    </div>
+
+    <div class="form-group">
+      <p>Have you any suggestions on how we can improve our tasty treats?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comments or suggestions here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+
+<!-- close container class-->
+</div>
+
+</body>
+
+</html>
