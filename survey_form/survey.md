@@ -23,7 +23,7 @@
 16. Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
 17. 
 
-## CSS code from example codepen
+## CSS code from the example codepen provided:
 ```css
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
@@ -210,7 +210,7 @@ form {
 
 
 
-## HTML code from sample codepen:
+## HTML code from sample codepen provided:
 ```html
 <div class="container">
   <header class="header">

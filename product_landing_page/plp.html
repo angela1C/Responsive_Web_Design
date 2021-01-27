@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"</html>
+<head>
+
+    <meta charset="UTF-8">
+  
+  <!--  <link rel="stylesheet" type="text/css"  href="css/product_landing.css"/> -->
+
+<style>
+
+.logo-image{
+    width:120px;
+    height: 150px;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    position:fixed;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    justify-content:space-around;
+}
+
+nav{
+    width: 100%;
+}
+
+.sign-up-page{
+    height: 500px;
+    display:flex;
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sign-up-form{
+    text-align: center;
+    background-color: chartreuse;
+    margin-bottom: 15px;
+}
+
+.video-page{
+    background-color: darkgray;
+    height: 500px;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.video{
+    text-align: center;
+}
+
+#products{
+
+    height:500px;
+    background-color: darkseagreen;
+}
+
+
+
+@media (max-width: 600px) {
+    nav{
+        display:none;
+        
+    }
+  }
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+<header id="header">
+
+   
+
+<img class="logo-image" src="img/doras.png" alt="logo-image">
+
+
+
+<nav>
+    <div class="nav-list">
+        <ul class="nav-item-wrapper">
+
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Contact</li>
+            <li class="nav-item"><A href="#products">Products</A></li>
+            <li class="nav-item"><a href="#booking-section">Booking Section</a></li>
+        </ul>
+
+
+
+
+    </div>
+
+
+
+</nav>
+
+</header>
+
+<div class="sign-up-page">
+
+    <form class="sign-up-form" id="form" action="https://www.freecodecamp.com/email-submit">
+        <input
+          name="email"
+          id="email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <input id="submit" type="submit" value="Submit" class="btn" />
+      </form>
+
+
+</div>
+
+<div class="video-page">
+
+    <div class="vidoe">
+
+    <h2>About us</h2>
+        <iframe
+          id="video"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+    </div>
+ 
+
+
+</div>
+
+
+<div class= "products-page" id="products">
+
+    <h2>products page</h2>
+
+
+
+</div>
+
+</body>
+
+</html>
+
