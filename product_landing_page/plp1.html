@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color:lightblue;
+  }
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- main navigation section-->
+<header id="header"> <!-- A header element with a corresponding id="header".-->
+<!--Navbar-->
+
+<!-- Within the #header element, a nav element with a corresponding id="nav-bar".-->
+ <!-- An image within the header element with a corresponding id="header-img" such as a company logo.-->
+       <!-- The navbar should always be at the top of the viewport.-->
+<nav id="nav-bar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+ 
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://source.unsplash.com/random/" id="header-img" alt="" width="40" height="30" class="d-inline-block align-top">
+           
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- clickable elements inside the nav element, each with the class nav-link.-->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#jumbo">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fcc">FCC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#form">Join us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#hero" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+
+            
+     
+     
+  </nav>
+
+
+    
+
+    
+
+</header>
+
+<!-- main layout-->
+
+<main class="container">
+
+
+  <div class="jumbotron text-center" id="jumbo">
+    <div class="container">
+      <h1 class="display-3">PLP</h1>
+      <p>A product landing page for the FreeCodeCamp responsive web design project </p>
+      <p>Using CSS, HTML, Bootstrap4</p>
+      <p>See FreeCodeCamp.com, W3schools.com and getbootstrap.com </p>
+     
+
+      
+    </div>
+  </div>
+
+  <div class="container text-center">
+ 
+  </br>
+    <img class="img-fluid mx-auto d-block" src="img/tree-branch.jpg" alt="tree" width="460" height="345"> 
+  </div>
+
+  <div class="container text-center">
+   
+
+  </div>
+
+  <div class="container" id="hero">
+    <p>This is a section that is using the CSS flexbox property.</p>
+    <p>I am using Bootstrap4 for most of the styling on this page.</p>
+    <p> Resize the page to see a media query in action</p>
+    <p>Enter your email address if you want to be added to the newsletter</p>
+     <!-- a form element with a corresponding id="form".-->
+    <!-- an input field with id="email" to enter an email address.-->
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <div class="form-group">
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      /></br>
+    
+      <input id="submit" type="submit" value="enter" class="btn btn-outline-light text-dark" />
+    </div>
+    </form>
+  </div>
+  
+
+  <div class="container">
+  </br>
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4 text-muted" id="resources">
+        <h4>W3schools</h4>
+        <p>The world's largest web developer site with tutorials on HTML, CSS, JavaScript, programming etc</p>
+        <p>Also references, examples, exercises and certificates.</p>
+        <p><a class="btn btn-secondary" href="https://www.w3schools.com/" role="button">Go to w3schools.com</a></p>
+      </div>
+      <div class="col-md-4 text-muted">
+        <h4>Get Bootstrap4</h4>
+        <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p><a class="btn btn-secondary" href="https://getbootstrap.com" role="button">get Bootstrap</a></p>
+      </div>
+      <div class="col-md-4 text-muted" id="fcc">
+        <h4>FreeCodeCamp videos</h4>
+       
+        <iframe id="video" width="260" height="115" 
+        src="https://www.youtube.com/embed/mU6anWqZJcc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <p>Go to Youtube.com for a selection of videos</p>
+        <p><a class="btn btn-secondary" href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" role="button">View on youtube</a></p>
+            
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+
+
+<!-- footer -->
+
+<footer">
+  <small class="d-block mb-3 text-muted">Angela1C&copy; 2021</small>
+    
+  </footer>
+
+
+</main>
+
+
+
+
+
+</body>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+</html>
+
