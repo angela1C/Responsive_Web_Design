@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Technical Documentation page</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <!-- Bootstrap core CSS 
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+-->
+
+
+
+    <style>
+
+#navbar {
+
+  position: fixed;
+  min-width: 200px;
+  top: 0px;
+  left: 0px;
+  width: 210px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(236, 248, 248, 0.4);
+  background-color: #f1f1f1;
+}
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: thin;
+}
+
+      
+    </style>
+
+  </head>
+  <body>
+    
+<nav id="navbar" class="bg-light fixed text-info">
+
+  <div class="container">
+    <header>Bootstrap4</header>
+    <ul>
+      <li><a class="nav-link text-info" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link text-info" href="#What_you_should_already_know"
+          >What you should already know</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-info" href="#Layout">Layout</a>
+      </li>
+      <li><a class="nav-link text-info" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link text-info" href="#Variables">Variables</a></li>
+      <li>
+        <a class="nav-link text-info" href="#Declaring_variables">Declaring variables</a>
+      </li>
+      <li><a class="nav-link text-info" href="#Variable_scope">Variable scope</a></li>
+      <li><a class="nav-link text-info" href="#Global_variables">Global variables</a></li>
+      <li><a class="nav-link text-info" href="#Constants">Constants</a></li>
+      <li><a class="nav-link text-info" href="#Data_types">Data types</a></li>
+      <li>
+        <a class="nav-link text-info" href="#if...else_statement">if...else statement</a>
+      </li>
+      <li><a class="nav-link text-info" href="#while_statement">while statement</a></li>
+      <li>
+        <a class="nav-link text-info" href="#Function_declarations"
+          >Function declarations</a
+        >
+      </li>
+      <li><a class="nav-link text-info" href="#Reference">Reference</a></li>
+    </ul>
+
+   
+  </div>
+</nav>
+
+
+
+
+
+<!-- a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).-->
+<!-- Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5-->
+<!-- The first element within each .main-section should be a header element which contains text that describes the topic of that section.-->
+<main id="main-doc" class="container text-center text-muted">
+    <section class="main-section " id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+        Bootstrap4 is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+        </p>
+  
+        <p>
+        Bootstrap is a free front-end framework for faster and easier web development. 
+        </p>
+        <ul>
+          <li>
+          Bootstrap requires the use of the HTML5 doctype.
+          </li>
+          <li>
+          Bootstrap is developed mobile-first. The code is optimised for mobile devices first and components are scaled up as necessary using CSS media queries.
+          </li>
+          <li>Add the responsive viewport meta tag to you <code>&lt;head&gt;</code> to ensure proper rendering and touch zooming for all devices.</li>
+          
+          <li>Bootstrap supports the latest, stable releases of all major browsers and platforms.</li>
+          <li>Bootstrap supports the latest versions of each major platform’s default browsers.</li>
+          <li>You can download Bootstrap or use a CDN. See <a href="https://getbootstrap.com/docs/4.6/getting-started/download/">Getting Started</a></li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+  
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            Some programming experience. If you are new to programming, try one of
+            the tutorials linked on the main page about JavaScript.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Layout">
+      <header>Layout</header>
+
+      <article>
+        <p>
+        This section outlines the components and options for laying out a Bootstrap project including:</br> wrapping containers, a powerful grid system, flexible media object and responsive utility classes.
+        </p>
+  
+        <p>
+         Containers are the most basic layout element in Bootstrap and are required when using it's default grid system.
+         Use containers to contain, pad and center the content within them.
+         Containers can be nested but this is not usually required.
+        </p>
+        <ul>The 3 Bootstrap4 containers:
+            <li><code>.container</code> which sets a <code>max-width</code> at each responsive breakpoint</li>
+            <li><code>.container-fluid</code> which is <code>width: 100%</code> at all breakpoints</li>
+            <li><code>.container-{breakpoint}</code> which is <code>width: 100%</code> until the specified breakpoint.</li>
+            <li>See <a href="https://getbootstrap.com/docs/4.6/layout/overview/">Layout overview</a> for examples and how to use.</li>
+
+        </ul>
+        <p>
+            another paragraph here 
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        Some simple bootstrap syntax here with some code examples. Below is javascript from the demo
+        <code
+          >function greetMe(yourName) { alert("Hello " + yourName); }
+          greetMe("World");
+        </code>
+  
+        Select the code in the pad and hit Ctrl+R to watch it unfold in your
+        browser!
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Another header section</header>
+      <p>
+       another paragraph for this section
+      </p>
+      <p>
+        another paragraph for this section
+      </p>
+      <p>
+        another paragraph for this section
+      </p>
+    </section>
+    <section class="main-section" id="Declaring_variables">
+      <header>Another header section</header>
+      <article>
+        a sentence about this section
+        <p>
+          a paragraph that may include some <code>code</code>
+        </p>
+        <p>
+            a paragraph that may include some <code>code</code>
+        </p>
+        <p>
+            a paragraph that may include some <code>code</code>
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variable_scope">
+      <header>Yet another section header</header>
+      <article>
+        <p>
+          another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <p>
+          another paragraph for this section
+        </p>
+        <code>maybe some code</code>
+        <p>
+          maybe something about this code
+        </p>
+  
+        <code
+          >some more code here</code
+        >
+      </article>
+    </section>
+    <section class="main-section" id="Global_variables">
+      <header>Another section with another header</header>
+      <article>
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Constants">
+      <header>Another section header</header>
+      <article>
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <code>some code</code>
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <p>
+            another paragraph for this section. Make sure to use useful ids in the section tag
+        </p>
+  
+        <code>possible code again here</code>
+       something about the code
+        <code
+          >more code</code
+        >
+      </article>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Another header section</header>
+      <article>
+        <p>paragraph in this section</p>
+        <ul>
+          <li>
+            <p>paragraph in this section</p>
+            <ul>
+              <li>list items</li>
+              <li>
+             list items
+              </li>
+              <li>list items</li>
+
+            </ul>
+          </li>
+  
+        </ul>
+       some more information here.
+      </article>
+    </section>
+    <section class="main-section" id="if...else_statement">
+      <header>Another section header</header>
+      <article>
+ some text in this artcile 
+  
+        <code>code </code>
+       more text
+        <p>
+         another paragraph
+        </p>
+        <code
+          >code here
+        </code>
+       another piece of text
+  
+        <code
+          >more code</code
+        >
+       more text
+        <code>code</code> text demonstrating:
+  
+        <code>code </code>
+      </article>
+    </section>
+    <section class="main-section" id="while_statement">
+      <header>Another section header</header>
+      <article>
+        some more text about:
+  
+        <code>code </code> text about the code
+  
+        <p>
+          paragraph
+        </p>
+  
+        <p>
+       paragraph
+        </p>
+  
+        Example:
+  
+        <p>paragraph:</p>
+  
+        <code>code</code>
+        <p>
+          paragraph:
+        </p>
+  
+        <ul>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ul>
+        <p>
+          paragraph in here &lt; and more
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Function_declarations">
+      <header>Another header</header>
+      <article>
+    about this section:
+  
+        <ul>
+          <li>list item.</li>
+          <li>
+         list item
+          </li>
+          <li>
+           list item
+          </li>
+        </ul>
+        <p>
+          paragraph:
+        </p>
+  
+        <code>more code</code>
+        <p>
+        paragraph
+        </p>
+        <code>code</code>
+        <p>
+       paragraph
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference header section</header>
+      <article>
+        <ul>
+          <li>
+           A link to the bootstrap and w3schools pages
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+              target="_blank"
+              >getbootstrap</a
+            >
+          </li>
+        </ul>
+      </article>
+    </section>
+
+
+    <div class="starter-template text-center py-5 px-3">
+        <h1>A Technical Documentation page</h1>
+        <p class="lead">Following the FreeCodeCamp responsive web design curriculum.<br> I will document some Bootstrap and JQuery.</p>
+    
+        <ul>
+            <li>User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). </li>
+            <li>User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.</li>
+            <li>User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.</li>
+            <li>User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").</li>
+            <li>User Story #5: The .main-section elements should contain at least 10 p elements total (not each).</li>
+            <li> User Story #6: The .main-section elements should contain at least 5 code elements total (not each).</li>
+            <li>User Story #7: The .main-section elements should contain at least 5 li items total (not each).</li>
+            <li>User Story #8: I can see a nav element with a corresponding id="navbar".</li>
+            <li>User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation. </li>
+            <li>User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.</li>
+            <li>User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.</li>
+           
+            <li>User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").</li>
+            <li>User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.</li>
+            <li>User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.</li>
+            <li>User Story #15: My Technical Documentation page should use at least one media query.</li>
+        </ul>
+     
+      </div>
+  </main>
+
+  <footer class="container-fluid text-center">
+    <p>Footer Text</p>
+  </footer>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
