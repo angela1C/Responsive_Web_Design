@@ -30,6 +30,14 @@
   position:fixed;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    background-color:lightblue;
+  }
+}
+
+
+
 </style>
 
   </head>
@@ -54,23 +62,14 @@
                     <li class="nav-item"><a class="nav-link text-info" href="#Bootstrap4">Bootstrap4</a></li>
                     
                     <li> <a class="nav-link text-info" href="#Layout">Layout</a></li>
-                    <li><a class="nav-link text-info" href="#grid">Grid system</a></li>
+                    <li><a class="nav-link text-info" href="#Grid_System">Grid System</a></li>
              
                   
-                    <li><a class="nav-link text-info" href="#Content:-reboot">Content: Reboot</a></li>
-                    <li><a class="nav-link text-info" href="#Content:-Typography">Content: Typography</a></li>
-                    <li><a class="nav-link text-info" href="#Constants">Constants</a></li>
-                    <li><a class="nav-link text-info" href="#Data_types">Data types</a></li>
-                    <li>
-                      <a class="nav-link text-info" href="#if...else_statement">if...else statement</a>
-                    </li>
-                    <li><a class="nav-link text-info" href="#while_statement">while statement</a></li>
-                    <li>
-                      <a class="nav-link text-info" href="#Function_declarations"
-                        >Function declarations</a
-                      >
-                    </li>
-                    <li><a class="nav-link text-info" href="#Reference">Reference</a></li>
+                    <li><a class="nav-link text-info" href="#Content:_Reboot">Content: Reboot</a></li>
+                    <li><a class="nav-link text-info" href="#Content:_Typography">Content: Typography</a></li>
+                    <li><a class="nav-link text-info" href="#Components">Components</a></li>
+                    
+                    <li><a class="nav-link text-info" href="#References">References</a></li>
                   </ul>
               
                  
@@ -189,7 +188,7 @@ Quickly design and customize responsive mobile-first sites with Bootstrap, the w
       </p>
     </article>
   </section>
-  <section class="main-section" id="grid">
+  <section class="main-section" id="Grid_System">
     <header class="display-4 bg-info">Grid System</header>
     <article>
         <p>See <a href="https://getbootstrap.com/docs/4.6/layout/grid/">Grid system</a> which uses a mobile-first flexbox grid to built all sorts of  layouts. </p>
@@ -265,7 +264,7 @@ Quickly design and customize responsive mobile-first sites with Bootstrap, the w
       </ul>
     </article>
   </section>
-  <section class="main-section" id="Content:-reboot">
+  <section class="main-section" id="Content:_Reboot">
     <header class="display-4 bg-info">Content: Reboot</header>
     <p class="text-muted">
      <a href="https://getbootstrap.com/docs/4.6/content/reboot/">Reboot </a>is a collection of element-specific CSS changes in a single file. Reboot provides an elegant, consistent and simple baseline to build on. It builds upon Normalise providing many HTML elements with styles using only element selectors. Additional styling is done with classes. 
@@ -324,7 +323,7 @@ Quickly design and customize responsive mobile-first sites with Bootstrap, the w
   </p>
   
   </section>
-  <section class="main-section" id="Content:-Typography">
+  <section class="main-section" id="Content:_Typography">
     <header class="display-4 bg-info">Content: Typography</header>
     <article>
       <p class="text-muted"> Bootstrap sets basic global display, typography, and link styles. See <a href="https://getbootstrap.com/docs/4.6/utilities/text/">textual utility classes</a> for when more control is needed.</p>
@@ -358,93 +357,165 @@ Quickly design and customize responsive mobile-first sites with Bootstrap, the w
 
 
         </ul>
+      </br>
 
-        <ul> Text Utilities to change text alignment, transform, style, weight and colour.
-        <li> See <a href="https://getbootstrap.com/docs/4.6/utilities/text/">text utilities</a> and <a href="https://getbootstrap.com/docs/4.6/utilities/colors/">color utilities</a></li>
-        <ul>Blockquotes:
-        <li>Abbreviations <code>&lt;abbr&gt;</code> have default underline and a help cursor (?) to provide context on hover and to users of assistive technologies.</li>
-        <li>Add <code>.initialism</code> to add abbreviation for a slightly smaller font-size.</li>
-        <li>Add <code>&lt;blockquote class="blockquote"&gt;</code> around any HTML as a quote.</li>
-        <li>Add  <code>&lt;footer class="blockquote-footer"&gt;</code> for identifying a source. Wrap the name of the source in <code>&lt;cite&gt;</code></li>  
-        <li>Use text utilities to change the alignment of  blockquotes.</li>
+        <ul class="list-group"><h4>Text Utilities to change text alignment, transform, style, weight and colour.</h4>
+        <li class="list-group-item"> See <a href="https://getbootstrap.com/docs/4.6/utilities/text/">text utilities</a> and <a href="https://getbootstrap.com/docs/4.6/utilities/colors/">color utilities</a></li>
+        <ul class="list-group">Blockquotes:
+        <li class="list-group-item">Abbreviations <code>&lt;abbr&gt;</code> have default underline and a help cursor (?) to provide context on hover and to users of assistive technologies.</li>
+        <li class="list-group-item">Add <code>.initialism</code> to add abbreviation for a slightly smaller font-size.</li>
+        <li class="list-group-item">Add <code>&lt;blockquote class="blockquote"&gt;</code> around any HTML as a quote.</li>
+        <li class="list-group-item">Add  <code>&lt;footer class="blockquote-footer"&gt;</code> for identifying a source. Wrap the name of the source in <code>&lt;cite&gt;</code></li>  
+        <li class="list-group-item">Use text utilities to change the alignment of  blockquotes.</li>
 
-      </ul>Lists:
-      <li><code>class="list-unstyled"</code> to remove default <code>list-style</code> and left margin on list items of immediate children.</li>
-      <li>Remove a list's bullets using <code>.list-inline</code> class</li>
-      <li><code>.list-inline-item</code> to apply some light margin</li>
-      <li>For description lists, the terms and descriptions can be aligned horizontally using the grid system's predefined classes.</li>
-      <li>Use <code>.text-truncate</code> class to truncate the text with  an ellipsis.</li>
+      </ul>
+      <ul class="list-group">
+      Lists:
+      <li class="list-group-item"><code>class="list-unstyled"</code> to remove default <code>list-style</code> and left margin on list items of immediate children.</li>
+      <li class="list-group-item">Remove a list's bullets using <code>.list-inline</code> class</li>
+      <li class="list-group-item"><code>.list-inline-item</code> to apply some light margin</li>
+      <li class="list-group-item">For description lists, the terms and descriptions can be aligned horizontally using the grid system's predefined classes.</li>
+      <li class="list-group-item">Use <code>.text-truncate</code> class to truncate the text with  an ellipsis.</li>
+    </ul>
 
+     
 
-      <ul>
-
-        <ul>Code:
-        <li>Wrap inline snippets of code with <code>&lt;code&gt;</code> tags.</li>
-        <li>Use <code>&lt;pre&gt;</code>s for multiple lines of code. The <code>.pre-scrollable</code> class to set  a <code>max-height</code> of 340px and provide a y-axis scrollbar.</li>
-        <li>
+        <ul class="list-group">Code:
+        <li class="list-group-item">Wrap inline snippets of code with <code>&lt;code&gt;</code> tags.</li>
+        <li class="list-group-item">Use <code>&lt;pre&gt;</code>s for multiple lines of code. The <code>.pre-scrollable</code> class to set  a <code>max-height</code> of 340px and provide a y-axis scrollbar.</li>
+        <li class="list-group-item">
         <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
           &lt;p&gt;And another line of sample text here...&lt;/p&gt;
           </code></pre>
 
         </li>
-       <li>Use the <code>&lt;var&gt;</code> tag for indicating variables.</li>
-       <li>Use <code>&lt;kbd&gt;</code> to indicate  that input is typically entered via keyboard.</li>
-       <li>Use <code>&lt;samp&gt;</code> tag to indicate sample output from a program.</li>
+       <li class="list-group-item">Use the <code>&lt;var&gt;</code> tag for indicating variables.</li>
+       <li class="list-group-item">Use <code>&lt;kbd&gt;</code> to indicate  that input is typically entered via keyboard.</li>
+       <li class="list-group-item">Use <code>&lt;samp&gt;</code> tag to indicate sample output from a program.</li>
 
 
-        </ul>
+        </ul><hr/>
 
+      <h4>Images</h4>
+      <blockquote class="blockquote text-muted">
+        <p>Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.</p>
+        <footer class="blockquote-footer">From https://getbootstrap.com/docs/5.0/content/images/</footer>
+        </blockquote>
+
+      <ul class="list-group"> 
+
+      
 
       </ul>
+      <li class="list-group-item">Images in Bootstrap are made responsive with <code>.img-fluid</code>. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales with the parent element.</li>
+      <li class="list-group-item">As well as <a href="https://getbootstrap.com/docs/5.0/utilities/borders/">border-radius utilities</a>, you can use <code>.img-thumbnail</code> to give an image a rounded 1px border appearance.</li>
+      <li class="list-group-item">Images can be aligned with the <a href="https://getbootstrap.com/docs/5.0/utilities/float/">helper float classes</a> or <a href="https://getbootstrap.com/docs/5.0/utilities/text/#text-alignment">text alignment classes</a></li>
+      <li class="list-group-item">Centre block level images using the <code>.mx-auto margin.</code>  utility class</li>
+     
+      </li>
+      <hr/>
 
+      <h4>Tables:</h4>
 
+      <blockquote class="blockquote text-muted">
+        <p>Due to the widespread use of <table> elements across third-party widgets like calendars and date pickers, Bootstrap’s tables are opt-in. Add the base class .table to any <table>, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.</p>
+          <footer class="blockquote-footer">From https://getbootstrap.com/docs/5.0/content/tables/</footer>
+        </blockquote>
+      </blockquote>
 
+      <ul class="list-group">
+        <li class="list-group-item">Add the base class <code>.table</code> to any <code>&lt;table&gt;</code></li>
+        <li class="list-group-item">Extend with optional modifier classes or custom styles.</li>
+        <li class="list-group-item">Bootstrap tables are not inherited so nested tables can be styled independently of the parent.</li>
+        <li class="list-group-item">
+        <li class="list-group-item">Use contextual classes to color tables <code>&lt;table&gt;</code>, tables rows <code>&lt;tr&gt;</code> and individual cells <code>&lt;td&gt;</code>.</li>
+        <ul >
+
+          <li><code>class="table-primary"</code></li>
+          <li><code>class="table-secondary"</code></li>
+          <li><code>class="table-success"</code></li>
+          <li><code>class="table-danger"</code></li>
+          <li><code>class="table-warning"</code></li>
+          <li><code>class="table-info"</code></li>
+          <li><code>class="table-light"</code></li>
+          <li><code>class="table-dark"</code></li>
         </ul>
+      <li class="list-group-item">Use <code>.table-striped </code>to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</li>
+      <li class="list-group-item">Combine classes for example <code>class="table table-dark table-striped"</code>.</li>
+      <li class="list-group-item">Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</li>
+      <li class="list-group-item">Combine <code>class="table table-dark table-hover"</code> to combine stripes and hoverable rows.</li>
+      <li class="list-group-item">Add <code>.table-active</code> class to highlight a table row or cell.</li>
+      <li class="list-group-item">Add <code>.table-bordered</code> class for borders on all sides of the table and cells.</li>
+      <li class="list-group-item">Add <code>.table-borderless </code>  class for a table without borders.</li>
+      <li class="list-group-item">Add <code>.table-sm</code> to make any <code>.table </code> more compact by cutting all cell <code>padding</code> in half.</li>
 
-      <li>
 
 
+ 
       </li>
 
+      <li class="list-group-item">Table cells of <code>&lt;thead&gt;</code> are always vertical aligned to the bottom. Table cells in <code>&lt;thead&gt;</code> inherit their alignment from <code>&lt;table&gt;</code> and are aligned to the the top by default.</li>
+      <li class="list-group-item">Use the <a href="https://getbootstrap.com/docs/5.0/utilities/vertical-align/">vertical align</a> classes to re-align where needed.</li>
+      <ul>
+        <li class="list-group-item"><code>vertical-align: middle</code></li>
+        <li class="list-group-item"><code>vertical-align: bottom</code></li>
+      </ul>
+      <li class="list-group-item">Border styles, active styles, and table variants are not inherited by nested tables.</li>
+      <li class="list-group-item">See <a href="https://getbootstrap.com/docs/5.0/content/tables/#how-nesting-works">how nesting works.</a></li>
+      <li class="list-group-item">Responsive tables allow tables to be scrolled horizontally with ease.</li>
+      <li class="list-group-item">Make any table responsive across all viewports by wrapping a <code>.table</code> with <code> .table-responsive</code> for horizontally scrolling tables. </li>
+      <li class="list-group-item">Alternatively use <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code> to create responsive tables up to a particular breakpoint.</li>
+      <li class="list-group-item">Responsive tables use <code>overflow-y: hidden</code> which clips off any content that goes beyond the bottom or top edges of the table.</li>
+      <li class="list-group-item">See <a href="https://getbootstrap.com/docs/5.0/content/tables/#customizing-in-sass"> section for customising in Sass.</a></li>
+      </ul>
 
-      </li>
+      <ul class="list-group">
+
+        <li class="list-group-item">The <code>&lt;figure&gt;</code> tag can be used for displaying a piece of content such as an image with an optional caption.</li>
+        <li class="list-group-items">Use <code>.figure</code, <code>.figure-img</code> and <code>.figure-caption</code> classes to provide some baseline styles for the HTML5 <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements.</li>
+      </ul>
     </article>
   </section>
-  <section class="main-section" id="Variable_scope">
-    <header>Variable Scope</header>
+  <hr/>
+  <section class="main-section" id="Components">
+    <header class=" display-4 bg-info">Components</header>
     <article>
-      <p>
-        another paragraph for this section. Make sure to use useful ids in the section tag
-      </p>
+      <ul class="list-group">
+        <li class="list-group-item"> Alert provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</li>
+        <li class="list-group-item">Badges</li>
+        <li class="list-group-item">Breadcrumbs</li>
+        <li class="list-group-item">Buttons</li>
+        <li class="list-group-item">Button Group</li>
+        <li class="list-group-item">Card</li>
+        <li class="list-group-item">Carousel</li>
+        <li class="list-group-item">Close button</li>
+        <li class="list-group-item">Collapse</li>
 
-      <p>
-        another paragraph for this section
-      </p>
-      <code>maybe some code</code>
-      <p>
-        maybe something about this code
-      </p>
-
-      <code
-        >some more code here</code
-      >
+       
+          
+        </li>
+      </ul>
     </article>
+    <hr/>
   </section>
 
 
   <section class="main-section" id="References">
-    <header>References</header>
+    <header class="display-4 bg-info">References</header>
     <article>
-      <ul>
-        <li>
-         A link to the bootstrap and w3schools pages
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
-            target="_blank"
-            >getbootstrap</a
-          >
-        </li>
-      </ul>
+      <p>All the documentation above is from the <a href="https://getbootstrap.com/docs/4.6/">getBootstrap.com/docs</a></p>
+      The documentation pages contain several sections:
+      <ul class="list-group">
+        <li class="list-group-item"><a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/"
+            target="_blank">getbootstrap.com/getting-started</a></li>
+            <li class="list-group-item"><a href="https://getbootstrap.com/docs/4.6/layout/overview/"
+              target="_blank">Overview</a></li>
+              <li class="list-group-item"><a href="https://getbootstrap.com/docs/4.6/content/reboot/"
+                target="_blank">Content</a></li>
+                <li class="list-group-item"><a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/"
+                  target="_blank">getbootstrap.com/getting-started</a></li>
+              
+       </ul>
     </article>
   </section>
 
@@ -462,4 +533,8 @@ Quickly design and customize responsive mobile-first sites with Bootstrap, the w
 
 
 </div> <!-- close outer container-->
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+</html>
