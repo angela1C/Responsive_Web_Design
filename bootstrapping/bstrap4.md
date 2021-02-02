@@ -1,6 +1,6 @@
 ### Bootstrap and JQuery
 
-- some notes from the freecodecamp at https://www.freecodecamp.org/learn
+- Some notes from the freecodecamp at https://www.freecodecamp.org/learn and https://www.w3schools.com/jquery/default.asp
 
 - Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a div element.
 Bootstrap has different column width attributes that it uses depending on how wide the user's screen is. For example, phones have narrow screens, and laptops have wider screens.
@@ -28,16 +28,16 @@ The `i` element was originally used to make other elements italic, but is now co
 
 Note that the span element is also acceptable for use with icons.
 
-You can use Bootstrap's col-xs-* classes on form elements, too! For example so that radio buttons or checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
+You can use Bootstrap's `col-xs-*` classes on form elements also. For example so that radio buttons or checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
 
 - Bootstrap has a class called `well` that can create a visual sense of depth for your columns.
 
-- Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.
+- Not every class needs to have corresponding CSS. Sometimes classes are created just for the purpose of selecting those elements more easily using jQuery.
 
 - In addition to class attributes, you can give each of your elements an `id` attribute.
-Each id must be unique to a specific element and used only once per page
+Each `id` must be unique to a specific element and used only once per page
 
-- Using JQuery we can modify HTML elements without needing to actually change them in HTML.
+- JQuery  can be used to modify HTML elements without needing to actually change them in HTML.
 
 ---
 
@@ -63,7 +63,7 @@ This is important because without your document ready function, your code may ru
 - jQuery often selects an HTML element with a selector, then does something to that element.
 
 
-We selected them with `$`("button"), then we added some CSS classes to them with .addClass("animated bounce");
+Select  `$`("button"), then add some CSS classes to them with `.addClass("animated bounce");`
 ```javascript
 <script>
   $(document).ready(function() {
@@ -72,9 +72,9 @@ We selected them with `$`("button"), then we added some CSS classes to them with
 </script>
 ```
 
-jQuery's `.addClass()` function, which allows you to add classes to elements.
+jQuery's `.addClass()` function  allows you to add classes to elements.
 
-For example, you could make all the elements with the class text-primary shake by adding the following to your document ready function:
+For example, you could make all the elements with the class `text-primary` shake by adding the following to your document ready function:
 
 `$(".text-primary").addClass("animated shake");`
 
@@ -105,7 +105,7 @@ $("#target2").removeClass("btn-default");
 
 - jQuery has a function called .`css()` that allows you to change the CSS of an element.
 
-Here's how we would change its color to blue:
+Here is an example of changing an element's color to blue:
 
 ```javascript
 $("#target1").css("color", "blue");
@@ -128,7 +128,7 @@ $("button").prop("disabled", true);
 
 - jQuery has a function called `.html()` that lets you add HTML tags and text within an element. Any content previously within the element will be completely replaced with the content you provide using this function.
 
-Here's how you would rewrite and emphasize the text of our heading:
+Here is an example of how to rewrite and emphasize the text of a heading element:
 ```javascript
 $("h3").html("<em>jQuery Playground</em>");
 ```
@@ -141,7 +141,7 @@ $("h3").html("<em>jQuery Playground</em>");
 
 - jQuery has a function called `appendTo()` that allows you to select HTML elements and append them to another element.
 
-For example, if we wanted to move target4 from our right well to our left well, we would use:
+For example, to move target4 from id with "right-well" to  id with "left-well":
 
 ```javascript
 $("#target4").appendTo("#left-well");
@@ -152,7 +152,7 @@ In addition to moving elements, you can also copy them from one place to another
 
 - jQuery has a function called `clone()` that makes a copy of an element.
 
-For example, if we wanted to copy target2 from our left-well to our right-well, we would use:
+For example, to copy target2 from left-well to right-well use:
 
 ```javascript
 $("#target2").clone().appendTo("#right-well");
@@ -186,14 +186,11 @@ $("#left-well").children().css("color", "blue")
 ```
 
 #### jQuery: Target a Specific Child of an Element Using jQuery
-Id attributes are very convenient for targeting with jQuery selectors. But you won't always have such neat ids to work with.
-
-Fortunately, jQuery has some other tricks for targeting the right elements.
-
+Id attributes are very convenient for targeting with jQuery selectors but you might not always have ids to work with. 
 jQuery uses **CSS Selectors** to target elements. 
-- The `target:nth-child(n)` CSS selector allows you to select all the nth elements with the target class or element type.
+- The `target:nth-child(n)` CSS selector allows you to select all the `nth` elements with the target class or element type.
 
-Here's how you would give the third element in each well the bounce class:
+Example here of how to make third element in each well the bounce class:
 
 ```javascript
 $(".target:nth-child(3)").addClass("animated bounce");
@@ -221,3 +218,71 @@ $("body").addClass("animated fadeOut");
 ```
 
 
+---
+
+https://mdbootstrap.com/education/bootstrap/landing-page-lesson-1/
+
+- Create the basic structure of the page
+```html
+<header>
+
+  <nav>
+    <div class="container">
+
+      </div>
+    </nav>
+</header>
+<main>
+  </main>
+  <footer>
+    </footer>
+
+```
+- create the navigation bar in the header section. Place .container inside the nav bar in order to centre the links. 
+- Add the class `.fixed-top` to the nav bar to make it stick to the top of the screen.
+- Make a full page background for the page below the nav bar in the header section.
+
+
+```html
+<!--Mask-->
+<div id="intro" class="view">
+
+  <div class="mask">
+
+  </div>
+
+</div>
+<!--/.Mask-->
+```
+
+- `.view` is a wrapper for the background image which lets you add a mask to it.
+Use the mask to make the image darker or lighter to make the content more visible.
+- `.mask` is element with absolute position which makes it cover the background image.
+
+
+```css
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+```
+
+- Set height to 100% for all the parent elements of the background image so that the entire screen is covered with the image
+- give a URL path for the photo
+- set the background size to cover so that all available screen space is covered with the image
+- prefixes  `-webkit-`, `-moz-` and `-o-` make sure the code works properly in all browsers.
+
+### Notes on images
+
+The image should be big enough to keep the quality but as small as possible to reduce page loading time
+Ideally 1920px /1280 px resolution, jpg format and compress the file.

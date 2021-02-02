@@ -1,6 +1,10 @@
-# Responsive Web Design Projects - Build a Product Landing Page
+### Responsive Web Design Projects - Build a Product Landing Page
 
-## Objective: Build a CodePen.io app that is functionally similar to [this](https://codepen.io/freeCodeCamp/full/RKRbwL).
+Demo for the 3rd responsive web design project on FreeCodeCamp.
+
+The objective: Build a CodePen.io app that is functionally similar to [this](https://codepen.io/freeCodeCamp/full/RKRbwL).
+
+Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
 
 ## User Stories:
 
@@ -25,7 +29,7 @@
 
 10. The #email input field uses HTML5 validation to confirm that the entered text is an email address.
 
-11.: Within the form, there is a submit input with a corresponding id="submit".
+11. Within the form, there is a submit input with a corresponding id="submit".
 
 12. When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
 
